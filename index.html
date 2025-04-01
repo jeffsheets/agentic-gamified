@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevObsessed - Balatro CoPilot for Teams</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+      background-color: #0a0e1a;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    
+    .flyer {
+      width: 100%;
+      max-width: 800px;
+      background: linear-gradient(145deg, #1a1f35, #12162a);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+    
+    .header {
+      background: linear-gradient(90deg, #d41e45, #892089);
+      padding: 30px;
+      text-align: center;
+      position: relative;
+    }
+    
+    .logo {
+      font-size: 34px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+    
+    .tagline {
+      font-size: 20px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+    
+    .content {
+      padding: 30px;
+    }
+    
+    .title {
+      font-size: 38px;
+      font-weight: 800;
+      margin-bottom: 20px;
+      color: #fff;
+      text-align: center;
+    }
+    
+    .title span {
+      color: #d41e45;
+    }
+    
+    .description {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    
+    .card-row {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+    
+    .card {
+      width: 80px;
+      height: 120px;
+      background: white;
+      border-radius: 8px;
+      margin: 0 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: black;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      position: relative;
+      transform: rotate(0deg);
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-10px) rotate(5deg);
+    }
+    
+    .card:nth-child(2n) {
+      transform: rotate(-5deg);
+    }
+    
+    .card:nth-child(2n):hover {
+      transform: translateY(-10px) rotate(-10deg);
+    }
+    
+    .card:nth-child(3n) {
+      transform: rotate(8deg);
+    }
+    
+    .card:nth-child(3n):hover {
+      transform: translateY(-10px) rotate(13deg);
+    }
+    
+    .hearts {
+      color: #d41e45;
+    }
+    
+    .clubs {
+      color: #333;
+    }
+    
+    .diamonds {
+      color: #d41e45;
+    }
+    
+    .spades {
+      color: #333;
+    }
+    
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+    
+    .feature {
+      flex-basis: 48%;
+      background: rgba(255, 255, 255, 0.08);
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    
+    .feature h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #d41e45;
+    }
+    
+    .feature p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+    
+    .cta {
+      text-align: center;
+      padding: 20px 0;
+    }
+    
+    .cta-button {
+      background: linear-gradient(90deg, #d41e45, #892089);
+      color: white;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      font-weight: 600;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 15px rgba(212, 30, 69, 0.4);
+    }
+    
+    .cta-button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(212, 30, 69, 0.6);
+    }
+    
+    .footer {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+      opacity: 0.7;
+    }
+    
+    @media (max-width: 768px) {
+      .features {
+        flex-direction: column;
+      }
+      
+      .feature {
+        flex-basis: 100%;
+      }
+      
+      .card {
+        width: 60px;
+        height: 90px;
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="flyer">
+    <div class="header">
+      <div class="logo">DevObsessed</div>
+      <div class="tagline">Software Consultancy That Delivers</div>
+    </div>
+    
+    <div class="content">
+      <h1 class="title">Introducing <span>Balatro CoPilot</span> for Teams</h1>
+      
+      <p class="description">
+        We've developed an agentic code AI to take care of all the busy work for you — 
+        fronted by our innovative Balatro interface to gamify your agentic experience! 
+        Play your hand and apply your jokers correctly to maximize your development productivity.
+      </p>
+      
+      <div class="card-row">
+        <div class="card hearts">A♥</div>
+        <div class="card spades">K♠</div>
+        <div class="card diamonds">Q♦</div>
+        <div class="card clubs">J♣</div>
+      </div>
+      
+      <div class="features">
+        <div class="feature">
+          <h3>🃏 Poker-Inspired Interface</h3>
+          <p>Inspired by the popular Balatro game, our interface transforms AI interactions into strategic gameplay.</p>
+        </div>
+        
+        <div class="feature">
+          <h3>🤖 Agentic AI Assistant</h3>
+          <p>Powerful AI that handles repetitive coding tasks while you focus on creative problem-solving.</p>
+        </div>
+        
+        <div class="feature">
+          <h3>🏆 Team Leaderboards</h3>
+          <p>Compete with colleagues as you earn points for completed tasks and efficient code solutions.</p>
+        </div>
+        
+        <div class="feature">
+          <h3>🔄 Joker System</h3>
+          <p>Apply special "jokers" to enhance AI capabilities for specific coding challenges.</p>
+        </div>
+      </div>
+      
+      <div class="cta">
+        <button class="cta-button">Deal Me In!</button>
+      </div>
+    </div>
+    
+    <div class="footer">
+      DevObsessed, Inc. © 2025 | Contact: devobsessed.com
+    </div>
+  </div>
+</body>
+</html>
